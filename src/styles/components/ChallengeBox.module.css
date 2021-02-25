@@ -1,0 +1,124 @@
+.challengeBoxContainer {
+    height: 100%;
+    background: var(--white);
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    padding: 1.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* CARD : ACTIVE */
+
+.challengeBoxActive {
+    height: 100%;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.challengeBoxActive header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding:0 2rem 1rem ;
+    border-bottom: 1px solid var(--gray-line);
+    color: var(--blue);
+}
+
+.challengeBoxActive main {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 2rem;
+}
+
+.challengeBoxActive main strong {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--title);
+}
+
+.challengeBoxActive main p {
+    display: flex;
+    max-width: 70%;
+    margin: 1.25rem 0;
+}
+
+.challengeBoxActive main img {
+    margin-bottom: 2rem;
+}
+
+.challengeBoxActive footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.challengeBoxActive footer button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 3rem;
+
+    margin: 0 0.5rem;
+    border-radius: 5px;
+    border: none;
+
+    outline: none;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.10);
+    transition: filter 0.3s ease-in-out;
+}
+
+.challengeBoxActive footer button:hover{
+    filter: brightness(0.9);
+    box-shadow: 10 0 50px black;
+}
+
+.challengeBoxActive .challengeFailedButton {
+    background: var(--red);
+    font-size: 1.25rem;
+    color: var(--white);
+}
+
+.challengeBoxActive .challengeSucceededButton {
+    background: var(--green);
+    font-size: 1.25rem;
+    color: var(--white);
+}
+/* CARD : NOT ACTIVIE */
+
+.challengeBoxNotActive {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.challengeBoxNotActive strong{
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 2rem;
+}
+
+.challengeBoxNotActive p{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 70%;
+    line-height: 1.5rem;
+    margin-top: 3rem;
+}
+
+.challengeBoxNotActive p img{
+    margin-bottom: 1rem;
+}

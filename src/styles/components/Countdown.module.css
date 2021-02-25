@@ -36,6 +36,8 @@
     margin: 0 0.5rem;
 }
 
+/* POMODORO BUTTON */
+
 .startCountdownBtn {
     display: flex;
     align-items: center;
@@ -54,9 +56,25 @@
 
     outline: none;
 
-    transition: background-color 150ms;
+    transition: background-color 200ms;
 }
 
-.startCountdownBtn:hover{
+.startCountdownBtn:not(:disabled):hover{
     background: var(--blue-dark);
+}
+
+.startCountdownBtnActive {
+    background: var(--tomato);
+    color: var(--white);
+}
+
+.startCountdownBtnActive:not(:disabled):hover{
+    background: var(--red);
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.10);
+}
+
+.startCountdownBtn:disabled {
+    cursor: no-drop;
+    background: var(--white);
+    color: var(--title);
 }

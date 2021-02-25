@@ -1,12 +1,18 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import { ChallengeContext } from "../contexts/ChallengeContext";
 import styles from "../styles/components/Countdown.module.css";
 
+let countdownTimeOut: NodeJS.Timeout;
+
 const Countdown = () => {
-  const [time, setTime] = useState(24 * 60);
-  const [counting, setCounting] = useState(false);
+  const [time, setTime] = useState(0.1 * 60);
+  const [isCounting, setIsCounting] = useState(false);
+  const [hasFinished, setHasFinished] = useState(false);
 
   let minutes = Math.floor(time / 60);
   let seconds = time % 60;
+
+  const { startNewChallenge } = useContext(ChallengeContext);
 
   /*
    *torna "minutes" em string ->
@@ -18,19 +24,29 @@ const Countdown = () => {
   const [minuteLeft, minuteRight] = String(minutes).padStart(2, "0").split("");
   const [secondLeft, secondRight] = String(seconds).padStart(2, "0").split("");
 
+  function handleCountDownReset() {
+    clearTimeout(countdownTimeOut);
+    setIsCounting(false);
+    setTime(0.1 * 60);
+  }
+
   function handleCountdownStart() {
-    setCounting(true);
+    setIsCounting(true);
+    setHasFinished(false);
   }
 
   useEffect(() => {
-    if (counting && time > 0) {
-      setTimeout(() => {
+    if (isCounting && time > 0) {
+      countdownTimeOut = setTimeout(() => {
         setTime(time - 1);
       }, 1000);
-    } else {
-      return;
+    } else if (isCounting && time === 0) {
+      setIsCounting(false);
+      setHasFinished(true);
+      handleCountDownReset();
+      startNewChallenge();
     }
-  }, [time, counting]);
+  }, [time, isCounting]);
 
   return (
     <div>
@@ -45,13 +61,31 @@ const Countdown = () => {
           <span>{secondRight}</span>
         </div>
       </div>
-      <button
-        type="button"
-        className={styles.startCountdownBtn}
-        onClick={handleCountdownStart}
-      >
-        Começar cronômetor
-      </button>
+      {hasFinished ? (
+        <button disabled className={styles.startCountdownBtn}>
+          Fim do pomodoro
+        </button>
+      ) : (
+        <>
+          {isCounting ? (
+            <button
+              type="button"
+              className={`${styles.startCountdownBtn} ${styles.startCountdownBtnActive}`}
+              onClick={handleCountDownReset}
+            >
+              Abandonar pomodoro
+            </button>
+          ) : (
+            <button
+              type="button"
+              className={styles.startCountdownBtn}
+              onClick={handleCountdownStart}
+            >
+              Começar pomodoro
+            </button>
+          )}
+        </>
+      )}
     </div>
   );
 };
