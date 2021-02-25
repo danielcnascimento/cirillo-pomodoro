@@ -1,4 +1,4 @@
-import styles from "../styles/pages/experienceBar.module.css";
+import styles from "../styles/components/ExperienceBar.module.css";
 
 const ExperienceBar = () => {
   return (
