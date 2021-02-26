@@ -1,10 +1,18 @@
 import { createContext, ReactNode, useState } from "react";
 import challenges from "../../challenges.json";
 
+interface Challenge {
+  type: "body" | "eye";
+  description: String;
+  amount: number;
+}
+
 interface ChallengeContextData {
   level: number;
   experience: number;
   challengesCompleted: number;
+  activeChallenge: Challenge;
+  resetChallenge: () => void;
   newLevelUp: () => void;
   startNewChallenge: () => void;
 }
@@ -21,7 +29,13 @@ export function ChallengeProvider({ children }: ChallengeProvider) {
   const [level, setLevel] = useState(0);
   const [experience, setExperience] = useState(0);
   const [challengesCompleted, setChallengesCompleted] = useState(0);
-  const [activeChallenge, setActiveChallenge] = useState({});
+  const [activeChallenge, setActiveChallenge] = useState(null);
+
+  // CONTEXT FUNCTIONS
+
+  function resetChallenge() {
+    setActiveChallenge(null);
+  }
 
   function newLevelUp() {
     setLevel(level + 1);
@@ -40,6 +54,8 @@ export function ChallengeProvider({ children }: ChallengeProvider) {
         level,
         experience,
         challengesCompleted,
+        activeChallenge,
+        resetChallenge,
         newLevelUp,
         startNewChallenge,
       }}
