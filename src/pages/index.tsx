@@ -8,6 +8,7 @@ import styles from "../styles/pages/Home.module.css";
 import ChallengeBox from "../components/ChallengeBox";
 import { CountdownProvider } from "../contexts/CountdownContext";
 import { ChallengeProvider } from "../contexts/ChallengeContext";
+import LevelUpModal from "../components/LevelUpModal";
 
 interface getUserDataProps {
   level: number;
@@ -27,6 +28,7 @@ export default function Home(props: getUserDataProps) {
         challengeCompleted={props.challengesCompleted}
       >
         <CountdownProvider>
+          <LevelUpModal />
           <ExperienceBar />
           <section>
             <div>
