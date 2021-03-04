@@ -1,6 +1,6 @@
-import { send } from "process";
 import { createContext, ReactNode, useEffect, useState } from "react";
 import challenges from "../../challenges.json";
+import COOKIE from "js-cookie";
 
 interface Challenge {
   type: "body" | "eye";
@@ -24,14 +24,23 @@ interface ChallengeContextData {
 export const ChallengeContext = createContext({} as ChallengeContextData);
 
 //pega o conteudo do _app e aplica o context provider.
-interface ChallengeProvider {
+interface ChallengeProviderProps {
   children: ReactNode; //aceita elementos React (components, html, funções, etc).
+  level: number;
+  experience: number;
+  challengeCompleted: number;
 }
 
-export function ChallengeProvider({ children }: ChallengeProvider) {
-  const [level, setLevel] = useState(1);
-  const [experience, setExperience] = useState(0);
-  const [challengesCompleted, setChallengesCompleted] = useState(0);
+// estava com problemas em usar as props, em função de nome dupicado.
+// uma solução foi usar o spread oparator.
+export function ChallengeProvider({ ...props }: ChallengeProviderProps) {
+  const [level, setLevel] = useState(
+    props.level ?? 1
+  ); /* SE NÃO EXISTIR, ENTÃO... */
+  const [experience, setExperience] = useState(props.experience ?? 0);
+  const [challengesCompleted, setChallengesCompleted] = useState(
+    props.challengeCompleted ?? 0
+  );
   const [activeChallenge, setActiveChallenge] = useState(null);
 
   const expToNextLevel = Math.pow((level + 1) * 4, 2);
@@ -39,6 +48,12 @@ export function ChallengeProvider({ children }: ChallengeProvider) {
   useEffect(() => {
     Notification.requestPermission();
   }, []);
+
+  useEffect(() => {
+    COOKIE.set("user_level", String(level));
+    COOKIE.set("user_exp", String(experience));
+    COOKIE.set("user_completed_challenges", String(challengesCompleted));
+  }, [level, experience, challengesCompleted]);
 
   /*
    * upa mais um nivel se alcançar expêriencia necessária.
@@ -114,7 +129,7 @@ export function ChallengeProvider({ children }: ChallengeProvider) {
         startNewChallenge,
       }}
     >
-      {children}
+      {props.children}
     </ChallengeContext.Provider>
   );
 }
