@@ -28,6 +28,10 @@ export function CountdownProvider({ children }: CountdownContextProps) {
   const [time, setTime] = useState(25 * 60);
   const [isCounting, setIsCounting] = useState(false);
   const [hasFinished, setHasFinished] = useState(false);
+  const [audio] = useState(
+    typeof Audio !== "undefined" && new Audio("/sounds/clock-ticking-3.mp3")
+  );
+  const [isPlaying, setIsPlaying] = useState(false);
 
   /*
    *torna "minutes" em string ->
@@ -37,7 +41,6 @@ export function CountdownProvider({ children }: CountdownContextProps) {
    */
   let minutes = Math.floor(time / 60);
   let seconds = time % 60;
-
   const { startNewChallenge } = useContext(ChallengeContext);
 
   function handleCountdownReset() {
@@ -45,11 +48,13 @@ export function CountdownProvider({ children }: CountdownContextProps) {
     setIsCounting(false);
     setHasFinished(false);
     setTime(0.1 * 60);
+    setIsPlaying(false);
   }
 
   function handleCountdownStart() {
     setIsCounting(true);
     setHasFinished(false);
+    setIsPlaying(true);
   }
 
   useEffect(() => {
@@ -59,10 +64,15 @@ export function CountdownProvider({ children }: CountdownContextProps) {
       }, 1000);
     } else if (isCounting && time === 0) {
       setIsCounting(false);
+      setIsPlaying(false);
       setHasFinished(true);
       startNewChallenge();
     }
   }, [time, isCounting]);
+
+  useEffect(() => {
+    isPlaying ? audio.play() && (audio.loop = true) : audio.pause();
+  }, [isPlaying, time]);
 
   return (
     <CountdownContext.Provider

@@ -64,10 +64,12 @@ export function ChallengeProvider({ ...props }: ChallengeProviderProps) {
   function newLevelUp() {
     setLevel(level + 1);
     setHasLeveledUpModal(true);
+    new Audio("/sounds/achivement-active.mp3").play();
   }
 
   function closeLevelUpModal() {
     setHasLeveledUpModal(false);
+    new Audio("/sounds/close-it.mp3").play();
   }
   /*
    * rejeita o desafio.
@@ -75,6 +77,7 @@ export function ChallengeProvider({ ...props }: ChallengeProviderProps) {
    */
   function resetChallenge() {
     setActiveChallenge(null);
+    new Audio("/sounds/close-it.mp3").play();
   }
 
   /*
@@ -87,7 +90,7 @@ export function ChallengeProvider({ ...props }: ChallengeProviderProps) {
 
     setActiveChallenge(randomChallenge);
 
-    new Audio("/notification.mp3").play();
+    new Audio("/sounds/notification.mp3").play();
 
     if (Notification.permission === "granted") {
       new Notification("Dúvido completar", {
