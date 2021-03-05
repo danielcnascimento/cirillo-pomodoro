@@ -37,9 +37,7 @@ interface ChallengeProviderProps {
 // estava com problemas em usar as props, em função de nome dupicado.
 // uma solução foi usar o spread oparator.
 export function ChallengeProvider({ ...props }: ChallengeProviderProps) {
-  const [level, setLevel] = useState(
-    props.level ?? 1
-  ); /* SE NÃO EXISTIR, ENTÃO... */
+  const [level, setLevel] = useState(props.level ?? 1);
   const [experience, setExperience] = useState(props.experience ?? 0);
   const [challengesCompleted, setChallengesCompleted] = useState(
     props.challengeCompleted ?? 0
