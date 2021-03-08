@@ -47,7 +47,7 @@ export function CountdownProvider({ children }: CountdownContextProps) {
     clearTimeout(countdownTimeOut);
     setIsCounting(false);
     setHasFinished(false);
-    setTime(0.1 * 60);
+    setTime(25 * 60);
     setIsPlaying(false);
   }
 
