@@ -26,7 +26,7 @@
   </a>
 </p>
 
-<p align="center">Topics</p>
+<p align="center">Topics - English available</p>
 
 <p align="center">
   <a href="#tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
