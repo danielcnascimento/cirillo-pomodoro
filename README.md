@@ -31,8 +31,9 @@
 <p align="center">
   <a href="#tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#funcionalidades">Ações</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#protótipo">Protótipo</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#protótipo">Design e Deploy</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#instalação">Instalação</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#descricao">Wiki</a>
 </p>
 
 <p align="center">
@@ -65,9 +66,10 @@ Cirillo Pomodoro possui atualmente as seguintes funcionalidades:
 
 
 <h2 id="protótipo"> ⏱️ Protótipo - template </h2>
-Desenho da aplicação:
+Desenho e deploy:
 
-Acesso ao protótipo [Figma](http://figma.com/) através [desse link](https://www.figma.com/file/ge20pu3ofMOKoliUyKx1Nl/Move.it-1.0). Uma [conta](http://figma.com/) será necessário.
+ [Figma](https://www.figma.com/file/ge20pu3ofMOKoliUyKx1Nl/Move.it-1.0). Uma [conta](http://figma.com/) será necessário.
+ [Cirillo Pomodoro](https://cirillo-pomodoro-danielcnascimento.vercel.app/).
 
 <h2 id="instalação"> ⏱️ Instalação - install and usage </h2>
 Instalação e uso do Cirillo Pomodoro:
@@ -76,4 +78,29 @@ Instalação e uso do Cirillo Pomodoro:
 - Instale as dependências com `yarn` 🧶
 - Inicie o servidor com `yarn dev` 🌐
 
-<p align="center"> Feito com 💚 por Daniel Nascimento - versão inicial 1.0 - ©️ copyright 2021 </p>
+<h2 id="descricao"> ⏱️ Wiki </h2>
+Entenda melhor sobre Cirillo Pomodoro:
+<br />
+
+<details>
+  <summary>Informações sobre cirillo pomodoro.</summary>
+  <article> 
+    <p>
+  Tendo noção de que o tempo é um recurso valioso, Cirillo Pomodoro faz com que você se mantenha focado. Esta técnica funciona porque foi cientificamente provado. Precisamos nos limitar 100% a um determinado assunto quando queremos avançar, assim evitando distrações. Portanto dividir o foco em ciclos afeta a parte importante do seu cérebro, o aprendizado, pois você estará 100% comprometido em seus assuntos, finalizando e aprendendo mais rapidamente.
+    </p>
+  </article>
+</details>
+
+<br />
+
+<details>
+  <summary>English- Cirillo Pomodoro</summary>
+  <p>
+  Time is a valuable resource, that's why I built Cirillo Pomodoro, not only to avoid distractions but to let you 100% committed to your subjects. This technique works because it has been scientifically tested and approved. Therefore dividing the focus on cycles affects the important part of your brain, learning. Try it out and achieve success faster.
+  </p>
+</details>
+
+<br />
+<br />
+
+<p align="center"> Feito com 💚 por Daniel Nascimento 👋🏻 - versão inicial 1.0 - ©️ copyright 2021 </p>
