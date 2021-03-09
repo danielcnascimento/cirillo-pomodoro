@@ -68,8 +68,9 @@ Cirillo Pomodoro possui atualmente as seguintes funcionalidades:
 <h2 id="protótipo"> ⏱️ Protótipo - template </h2>
 Desenho e deploy:
 
- [Figma](https://www.figma.com/file/ge20pu3ofMOKoliUyKx1Nl/Move.it-1.0). Uma [conta](http://figma.com/) será necessário.
- [Cirillo Pomodoro](https://cirillo-pomodoro-danielcnascimento.vercel.app/).
+ [Figma](https://www.figma.com/file/ge20pu3ofMOKoliUyKx1Nl/Move.it-1.0). Uma [conta](http://figma.com/) será necessário. 🖌️
+ <br />
+ [Cirillo Pomodoro](https://cirillo-pomodoro-danielcnascimento.vercel.app/). 🌐
 
 <h2 id="instalação"> ⏱️ Instalação - install and usage </h2>
 Instalação e uso do Cirillo Pomodoro:
