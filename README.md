@@ -44,17 +44,19 @@
 <h2 id="tecnologias"> ⏱️ Tecnologias - technologies </h2>
 Tecnologias que foram exploradas:
 
+<br />
+
 - [React](https://reactjs.org)
 - [Next.js](https://nextjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Js-Cookies](https://github.com/js-cookie/js-cookie)
 - [Material-UI](https://material-ui.com/getting-started/installation/)
 
-<br/>
-<br/>
 
 <h2 id="funcionalidades" > ⏱️ Ações - functionalities </h2>
 Cirillo Pomodoro possui atualmente as seguintes funcionalidades:
+
+<br />
 
 - Inicializar Ciclos de 25 minutos. `Countdown within 25 minutes.` ✔️
 - Abadornar ciclo Pomodoro. `Abandon Pomodoro cycle.` ✔️ 
@@ -68,12 +70,16 @@ Cirillo Pomodoro possui atualmente as seguintes funcionalidades:
 <h2 id="protótipo"> ⏱️ Protótipo - template </h2>
 Desenho e deploy:
 
- [Figma](https://www.figma.com/file/ge20pu3ofMOKoliUyKx1Nl/Move.it-1.0). Uma [conta](http://figma.com/) será necessário. 🖌️
- <br />
- [Cirillo Pomodoro](https://cirillo-pomodoro-danielcnascimento.vercel.app/). 🌐
+<br />
+
+- [Figma](https://www.figma.com/file/NAgKVLWEk87fgb9EKUzRbN/Cirillo-Pomodoro-1.0?node-id=160%3A2761). Uma [conta](http://figma.com/) será necessária. 🖌️
+- [Cirillo Pomodoro](https://cirillo-pomodoro-danielcnascimento.vercel.app/). 🌐
+
 
 <h2 id="instalação"> ⏱️ Instalação - install and usage </h2>
 Instalação e uso do Cirillo Pomodoro:
+
+<br />
 
 - Clone o repositório `https://github.com/danielcnascimento/cirillo-pomodoro.git` 📋
 - Instale as dependências com `yarn` 🧶
@@ -81,6 +87,7 @@ Instalação e uso do Cirillo Pomodoro:
 
 <h2 id="descricao"> ⏱️ Wiki </h2>
 Entenda melhor sobre Cirillo Pomodoro:
+
 <br />
 
 <details>
@@ -91,8 +98,6 @@ Entenda melhor sobre Cirillo Pomodoro:
     </p>
   </article>
 </details>
-
-<br />
 
 <details>
   <summary>English- Cirillo Pomodoro</summary>
