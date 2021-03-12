@@ -27,6 +27,22 @@ export default function Home(props: getUserDataProps) {
         challengeCompleted={props.challengesCompleted}
       >
         <CountdownProvider>
+          <aside>
+            <img src="logo.svg" />
+            <nav>
+              <ul>
+                <li className={styles.active}>
+                  <img src="assets/home.svg" />
+                </li>
+                <li>
+                  <img src="assets/sound-on.svg" />
+                </li>
+                <li>
+                  <img src="assets/settings.svg" />
+                </li>
+              </ul>
+            </nav>
+          </aside>
           <ExperienceBar />
           <section>
             <div>

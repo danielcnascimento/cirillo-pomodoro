@@ -44,7 +44,8 @@ button {
     cursor: pointer;
 }
 
-a {
+a, ul, li {
     color: inherit;
     text-decoration: none;
+    list-style-type: none;
 }
