@@ -73,7 +73,7 @@ Desenho e deploy:
 <br />
 
 - [Figma](https://www.figma.com/file/NAgKVLWEk87fgb9EKUzRbN/Cirillo-Pomodoro-1.0?node-id=160%3A2761). Uma [conta](http://figma.com/) será necessária. 🖌️
-- [Cirillo Pomodoro](https://cirillo-pomodoro-danielcnascimento.vercel.app/). 🌐
+- Abrir [Cirillo Pomodoro](https://cirillo-pomodoro-danielcnascimento.vercel.app/) sem seu navegador. 🌐
 
 
 <h2 id="instalação"> ⏱️ Instalação - install and usage </h2>
@@ -95,6 +95,9 @@ Entenda melhor sobre Cirillo Pomodoro:
   <article> 
     <p>
   Tendo noção de que o tempo é um recurso valioso, Cirillo Pomodoro faz com que você se mantenha focado. Esta técnica funciona porque foi cientificamente provado. Precisamos nos limitar 100% a um determinado assunto quando queremos avançar, assim evitando distrações. Portanto dividir o foco em ciclos afeta a parte importante do seu cérebro, o aprendizado, pois você estará 100% comprometido em seus assuntos, finalizando e aprendendo mais rapidamente.
+      <br />
+      <br />
+ 😀 Estarei focando em mais atualizações durante a semana, para levar a aplicação para um próximo estágio com novas features. Hoje o projeto conta com meu suporte e mais 1 pessoa, fique a vontade para fazer parte também.
     </p>
   </article>
 </details>
@@ -102,7 +105,10 @@ Entenda melhor sobre Cirillo Pomodoro:
 <details>
   <summary>English- Cirillo Pomodoro</summary>
   <p>
-  Time is a valuable resource, that's why I built Cirillo Pomodoro, not only to avoid distractions but to let you 100% committed to your subjects. This technique works because it has been scientifically tested and approved. Therefore dividing the focus on cycles affects the important part of your brain, learning. Try it out and achieve success faster.
+  Time is a valuable resource, that's why I built Cirillo Pomodoro, not only to avoid distractions but to let you 100% committed to your subjects. This technique works because it has been scientifically tested and approved. Therefore dividing the focus on cycles affects the important part of your brain, learning. Try it out and achieve success faster. 
+  <br />
+  <br />
+  😁 I will be focusing on new features for this month. Today it's having my support + 1 friend, feel free to join us if you are looking for some experience in team! be Welcome.
   </p>
 </details>
 
