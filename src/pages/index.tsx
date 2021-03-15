@@ -32,13 +32,25 @@ export default function Home(props: getUserDataProps) {
             <nav>
               <ul>
                 <li className={styles.active}>
-                  <img src="assets/home.svg" />
+                  <button>
+                    <img src="assets/home.svg" alt="Homepage." />
+                  </button>
                 </li>
                 <li>
-                  <img src="assets/sound-on.svg" />
+                  <button>
+                    <img
+                      src="assets/sound-on.svg"
+                      alt="Sound setting switcher."
+                    />
+                  </button>
                 </li>
                 <li>
-                  <img src="assets/settings.svg" />
+                  <button>
+                    <img
+                      src="assets/light-mode.svg"
+                      alt="Theme setting switcher."
+                    />
+                  </button>
                 </li>
               </ul>
             </nav>
