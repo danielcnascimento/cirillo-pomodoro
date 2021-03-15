@@ -73,7 +73,7 @@ Desenho e deploy:
 <br />
 
 - [Figma](https://www.figma.com/file/NAgKVLWEk87fgb9EKUzRbN/Cirillo-Pomodoro-1.0?node-id=160%3A2761). Uma [conta](http://figma.com/) será necessária. 🖌️
-- Abrir [Cirillo Pomodoro](https://cirillo-pomodoro-danielcnascimento.vercel.app/) sem seu navegador. 🌐
+- Abrir [Cirillo Pomodoro](https://cirillo-pomodoro-danielcnascimento.vercel.app/) em seu navegador. 🌐
 
 
 <h2 id="instalação"> ⏱️ Instalação - install and usage </h2>
