@@ -8,6 +8,7 @@ import styles from "../styles/pages/Home.module.css";
 import ChallengeBox from "../components/ChallengeBox";
 import { CountdownProvider } from "../contexts/CountdownContext";
 import { ChallengeProvider } from "../contexts/ChallengeContext";
+import { SettingProvider } from "../contexts/SettingContext";
 
 interface getUserDataProps {
   level: number;
@@ -21,53 +22,55 @@ export default function Home(props: getUserDataProps) {
       <Head>
         <title>Homepage | Cirillo Pomodoro</title>
       </Head>
-      <ChallengeProvider
-        level={props.level}
-        experience={props.experience}
-        challengeCompleted={props.challengesCompleted}
-      >
-        <CountdownProvider>
-          <aside>
-            <img src="logo.svg" />
-            <nav>
-              <ul>
-                <li className={styles.active}>
-                  <button>
-                    <img src="assets/home.svg" alt="Homepage." />
-                  </button>
-                </li>
-                <li>
-                  <button>
-                    <img
-                      src="assets/sound-on.svg"
-                      alt="Sound setting switcher."
-                    />
-                  </button>
-                </li>
-                <li>
-                  <button>
-                    <img
-                      src="assets/light-mode.svg"
-                      alt="Theme setting switcher."
-                    />
-                  </button>
-                </li>
-              </ul>
-            </nav>
-          </aside>
-          <ExperienceBar />
-          <section>
-            <div>
-              <Profile />
-              <CompletedChallenges />
-              <Countdown />
-            </div>
-            <div>
-              <ChallengeBox />
-            </div>
-          </section>
-        </CountdownProvider>
-      </ChallengeProvider>
+      <SettingProvider>
+        <ChallengeProvider
+          level={props.level}
+          experience={props.experience}
+          challengeCompleted={props.challengesCompleted}
+        >
+          <CountdownProvider>
+            <aside>
+              <img src="logo.svg" />
+              <nav>
+                <ul>
+                  <li className={styles.active}>
+                    <button>
+                      <img src="assets/home.svg" alt="Homepage." />
+                    </button>
+                  </li>
+                  <li>
+                    <button>
+                      <img
+                        src="assets/sound-on.svg"
+                        alt="Sound setting switcher."
+                      />
+                    </button>
+                  </li>
+                  <li>
+                    <button>
+                      <img
+                        src="assets/light-mode.svg"
+                        alt="Theme setting switcher."
+                      />
+                    </button>
+                  </li>
+                </ul>
+              </nav>
+            </aside>
+            <ExperienceBar />
+            <section>
+              <div>
+                <Profile />
+                <CompletedChallenges />
+                <Countdown />
+              </div>
+              <div>
+                <ChallengeBox />
+              </div>
+            </section>
+          </CountdownProvider>
+        </ChallengeProvider>
+      </SettingProvider>
     </div>
   );
 }
