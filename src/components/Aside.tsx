@@ -1,6 +1,9 @@
 import styles from "../styles/components/Aside.module.css";
+import { useContext } from "react";
+import { SettingContext } from "../contexts/SettingContext";
 
 const Aside = () => {
+  const { soundSwitcher, soundActiveted } = useContext(SettingContext);
   return (
     <aside className={styles.asideContainer}>
       <img src="logo.svg" />
@@ -12,8 +15,19 @@ const Aside = () => {
             </button>
           </li>
           <li>
-            <button>
-              <img src="assets/sound-on.svg" alt="Sound setting switcher." />
+            <button type="button" onClick={soundSwitcher}>
+              <img
+                src={`${
+                  soundActiveted
+                    ? "assets/sound-on.svg"
+                    : "assets/sound-off.svg"
+                }`}
+                alt={`${
+                  soundActiveted
+                    ? "Sound switcher - on."
+                    : "Sound switcher - off."
+                }`}
+              />
             </button>
           </li>
           <li>

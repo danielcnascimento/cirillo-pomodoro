@@ -6,6 +6,7 @@ import {
   useState,
 } from "react";
 import { ChallengeContext } from "./ChallengeContext";
+import { SettingContext } from "./SettingContext";
 
 interface CountdownContext {
   time: number;
@@ -42,6 +43,7 @@ export function CountdownProvider({ children }: CountdownContextProps) {
   let minutes = Math.floor(time / 60);
   let seconds = time % 60;
   const { startNewChallenge } = useContext(ChallengeContext);
+  const { soundActiveted } = useContext(SettingContext);
 
   function handleCountdownReset() {
     clearTimeout(countdownTimeOut);
@@ -71,7 +73,9 @@ export function CountdownProvider({ children }: CountdownContextProps) {
   }, [time, isCounting]);
 
   useEffect(() => {
-    isPlaying ? audio.play() && (audio.loop = true) : audio.pause();
+    isPlaying && soundActiveted
+      ? audio.play() && (audio.loop = true)
+      : audio.pause();
   }, [isPlaying, time]);
 
   return (

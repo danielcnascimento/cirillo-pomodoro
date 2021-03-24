@@ -1,7 +1,14 @@
-import { createContext, ReactNode, useEffect, useState } from "react";
+import {
+  createContext,
+  ReactNode,
+  useEffect,
+  useState,
+  useContext,
+} from "react";
 import challenges from "../../challenges.json";
 import COOKIE from "js-cookie";
 import LevelUpModal from "../components/LevelUpModal";
+import { SettingContext } from "./SettingContext";
 
 interface Challenge {
   type: "body" | "eye";
@@ -45,6 +52,8 @@ export function ChallengeProvider({ ...props }: ChallengeProviderProps) {
   const [activeChallenge, setActiveChallenge] = useState(null);
   const [hasLeveledUpModal, setHasLeveledUpModal] = useState(false);
 
+  const { soundActiveted } = useContext(SettingContext);
+
   const expToNextLevel = Math.pow((level + 1) * 4, 2);
 
   useEffect(() => {
@@ -64,12 +73,16 @@ export function ChallengeProvider({ ...props }: ChallengeProviderProps) {
   function newLevelUp() {
     setLevel(level + 1);
     setHasLeveledUpModal(true);
-    new Audio("/sounds/achivement-active.mp3").play();
+    soundActiveted
+      ? new Audio("/sounds/achivement-active.mp3").play()
+      : new Audio().pause();
   }
 
   function closeLevelUpModal() {
     setHasLeveledUpModal(false);
-    new Audio("/sounds/close-it.mp3").play();
+    soundActiveted
+      ? new Audio("/sounds/close-it.mp3").play()
+      : new Audio().pause();
   }
   /*
    * rejeita o desafio.
@@ -77,7 +90,9 @@ export function ChallengeProvider({ ...props }: ChallengeProviderProps) {
    */
   function resetChallenge() {
     setActiveChallenge(null);
-    new Audio("/sounds/close-it.mp3").play();
+    soundActiveted
+      ? new Audio("/sounds/close-it.mp3").play()
+      : new Audio().pause();
   }
 
   /*
