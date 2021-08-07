@@ -6,10 +6,10 @@ import Countdown from "../components/Countdown";
 import ExperienceBar from "../components/ExperienceBar";
 import Profile from "../components/Profile";
 import ChallengeBox from "../components/ChallengeBox";
+import Aside from "../components/Aside";
 import { CountdownProvider } from "../contexts/CountdownContext";
 import { ChallengeProvider } from "../contexts/ChallengeContext";
 import { SettingProvider } from "../contexts/SettingContext";
-import Aside from "../components/Aside";
 
 interface getUserDataProps {
   level: number;

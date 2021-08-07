@@ -105,7 +105,9 @@ export function ChallengeProvider({ ...props }: ChallengeProviderProps) {
 
     setActiveChallenge(randomChallenge);
 
-    new Audio("/sounds/notification.mp3").play();
+    soundActiveted
+      ? new Audio("/sounds/notification.mp3").play()
+      : new Audio().pause();
 
     if (Notification.permission === "granted") {
       new Notification("Dúvido completar", {

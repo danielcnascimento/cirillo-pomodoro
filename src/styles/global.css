@@ -7,9 +7,11 @@
 :root {
     --white: #fff;
     --background: #f2f3f5;
+    --background-dracula: #1C1B1B;
     --gray-line: #dcdde0;
     --text: #666666;
     --text-highlight: #b3b9ff;
+    --text-dracula: #eaeaea;
     --title: #2e384d;
     --red: #e83f5b;
     --green: #4cd62b;
@@ -18,6 +20,24 @@
     --blue-twitter: #2aa9e0;
     --tomato: #ff6347;
 }
+
+@media(prefers-color-scheme: dark) {
+    :root {
+        --white: #454444;
+        --background: #1C1B1B;
+        --gray-line: #dcdde0;
+        --text: #eaeaea;
+        --text-highlight: #b3b9ff;
+        --title: #fff;
+        --red: #e83f5b;
+        --green: #183642;
+        --blue: #355691;
+        --blue-dark: #4953b8;
+        --blue-twitter: #2aa9e0;
+        --tomato: #ff6347;
+    }
+}
+
 
 @media(max-width: 1080px) {
     html {
@@ -35,6 +55,7 @@ body {
     background: var(--background);
     color: var(--text);
 }
+
 
 body, input, textarea, button {
     font: 400 1rem 'Inter', sans-serif; /* weight, size, font-family*/

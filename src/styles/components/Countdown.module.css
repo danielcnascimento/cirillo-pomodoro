@@ -25,10 +25,12 @@
 
 .countdownContainer > div span:first-child{ /*pega o primeiro <span> dentro da primeira camada de <div> dessa classe*/
     border-right: 1px solid #f0f1f3;
+    color: var(--title);
 }
 
 .countdownContainer > div span:last-child{ /*pega o ultimo <span> dentro da primeira camada de <div> dessa classe*/
     border-left: 1px solid #f0f1f3;
+    color: var(--title);
 }
 
 .countdownContainer > span {
@@ -52,7 +54,7 @@
 
     font-size: 1.5rem;
     font-weight: 600;
-    color: var(--white);
+    color: var(--title);
 
     outline: none;
 
